@@ -1,4 +1,3 @@
-# jaderaychan.github.io
 幸会！
 
 这里是 Jaderay Chan，也是栖琪，

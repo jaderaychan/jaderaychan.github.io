@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>陈琪睿（Jaderay Chan）</title>
+<meta name="description" content="陈琪睿（Jaderay Chan）的个人主页。" />
+<meta name="author" content="陈琪睿（Jaderay Chan）" />
+
+<!-- 分享卡片 -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="陈琪睿（Jaderay Chan）" />
+<meta property="og:description" content="陈琪睿（Jaderay Chan）的个人主页。" />
+
+<link rel="icon" href="assets/portrait.svg" type="image/svg+xml" />
+
+<!-- 语言词条。必须在这里同步加载，否则切换语言会先闪一下中文 -->
+<script src="i18n.js"></script>
+
+<!-- 主题和语言都要在样式表之前定下来，否则会出现「白屏闪烁」和「中文闪一下」。
+     这段必须留在 <head>、不能加 defer / async。 -->
+<script>
+  (function () {
+    var KEY_LANG = 'site-lang';
+    var lang = 'zh';
+
+    /* ---- 语言 ---- */
+    try {
+      var savedLang = localStorage.getItem(KEY_LANG);
+      if (savedLang === 'en' || savedLang === 'zh') {
+        lang = savedLang;
+      } else if (navigator.language && navigator.language.toLowerCase().indexOf('zh') !== 0) {
+        lang = 'en';                 // 首次访问：非中文环境默认英文
+      }
+    } catch (e) { /* 隐私模式忽略 */ }
+
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'zh-CN');
+
+    function apply() {
+      // 每次都从 data-lang 读当前语言，而不是用闭包里的初始值，
+      // 这样 main.js 切换语言后调用本函数能立刻生效。
+      var current = document.documentElement.getAttribute('data-lang') === 'en' ? 'en' : 'zh';
+      var dict = (window.I18N || {})[current] || {};
+      var nodes = document.querySelectorAll('[data-i18n]');
+      for (var i = 0; i < nodes.length; i++) {
+        var key = nodes[i].getAttribute('data-i18n');
+        if (dict[key] !== undefined) nodes[i].textContent = dict[key];
+      }
+      var attrNodes = document.querySelectorAll('[data-i18n-attr]');
+      for (var j = 0; j < attrNodes.length; j++) {
+        var pairs = attrNodes[j].getAttribute('data-i18n-attr').split(',');
+        for (var k = 0; k < pairs.length; k++) {
+          var parts = pairs[k].split(':');
+          var attr = parts[0].trim(), akey = parts[1] && parts[1].trim();
+          if (attr && akey && dict[akey] !== undefined) attrNodes[j].setAttribute(attr, dict[akey]);
+        }
+      }
+      if (dict['meta.title']) document.title = dict['meta.title'];
+      var md = document.querySelector('meta[name="description"]');
+      if (md && dict['meta.desc']) md.setAttribute('content', dict['meta.desc']);
+      var buttons = document.querySelectorAll('[data-lang-btn]');
+      for (var b = 0; b < buttons.length; b++) {
+        var on = buttons[b].getAttribute('data-lang-btn') === current;
+        buttons[b].classList.toggle('is-active', on);
+        buttons[b].setAttribute('aria-pressed', on ? 'true' : 'false');
+      }
+    }
+
+    /* ---- 主题 ---- */
+    try {
+      var savedTheme = localStorage.getItem('site-theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    } catch (e) { /* 忽略 */ }
+
+    /* ---- 尽早套用文案 ---- */
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', apply);
+    } else {
+      apply();
+    }
+    window.__applyI18n = apply;   // 供 main.js 切换语言时调用
+  })();
+</script>
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+<a class="skip-link" data-i18n="ui.skip" href="#about">跳到正文</a>
+
+<!-- ===================== 顶栏：整条横跨，内容比正文区更宽 ===================== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" data-i18n="hero.name" href="#about">陈琪睿（Jaderay Chan）</a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="siteNav"
+            data-i18n-attr="aria-label:ui.menu" aria-label="打开菜单">
+      <span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav" aria-label="主导航">
+      <a data-i18n="nav.about" href="#about">关于</a>
+      <a data-i18n="nav.now" href="#now">在做的事</a>
+      <a data-i18n="nav.work" href="#work">作品</a>
+      <a data-i18n="nav.journey" href="#journey">经历</a>
+      <a data-i18n="nav.writing" href="#writing">写作</a>
+      <a data-i18n="nav.contact" href="#contact">联系</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- 语言切换：两个按钮一组，当前语言高亮 -->
+      <div class="lang-switch" role="group" aria-label="Language / 语言">
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang-btn="zh" aria-pressed="true">中文</button>
+      </div>
+
+      <button class="theme-btn" id="themeBtn" type="button"
+              data-i18n-attr="aria-label:ui.theme" aria-label="切换深色 / 浅色">◐</button>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <main>
+
+    <!-- ===================== 首屏：左头像 + 右文字 ===================== -->
+    <section class="hero" id="about">
+      <div class="portrait-column">
+        <div class="portrait-frame">
+          <!-- ↓ 换成你的照片：把照片放进 assets/，改下面的 src 即可 -->
+          <img src="assets/portrait.svg" alt="陈琪睿的照片" width="240" height="279"
+               data-i18n-attr="alt:hero.portraitAlt" />
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <h1 data-i18n="hero.name">陈琪睿（Jaderay Chan）</h1>
+        <p class="hero-role" data-i18n="hero.role">南京大学地理与海洋科学学院</p>
+        <p class="hero-place" data-i18n="hero.place">地理信息科学（辅修金融工程）</p>
+
+        <!-- 拆成两段：第二句会另起一行。不想要这个换行就把它合成一段 -->
+        <p class="hero-bio" data-i18n="hero.bio1">爱好文学艺术，经济金融，时事政治，</p>
+        <p class="hero-bio" data-i18n="hero.bio2">思考是生命最大的意义。</p>
+
+        <div class="hero-actions">
+          <a class="button" data-i18n="hero.cta" href="mailto:jaderaychan@smail.nju.edu.cn">给我写邮件</a>
+        </div>
+
+        <!-- 首屏下方的小清单：和参考站一样，用上边框和首屏连成一体 -->
+        <div class="hero-list">
+          <h2 data-i18n="hero.focusTitle">最近在关注</h2>
+          <ul>
+            <li data-i18n="hero.focus1">金融科技与量化交易</li>
+            <li data-i18n="hero.focus2">二级市场与行业研究</li>
+            <li data-i18n="hero.focus3">诗词文学和历史政治</li>
+            <li data-i18n="hero.focus4">钢琴艺术和人类心灵</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 在做的事 ===================== -->
+    <section class="block" id="now">
+      <div class="block-head">
+        <h2 data-i18n="now.title">在做的事</h2>
+        <p class="block-note" data-i18n="now.note">最近更新：2025 年 6 月</p>
+      </div>
+
+      <ul class="item-list">
+        <li class="item">
+          <span class="item-marker">01</span>
+          <div>
+            <h3 data-i18n="now.1t">习惯记录小工具</h3>
+            <p data-i18n="now.1d">自己用，也陆续有朋友在用。目前在改记录和统计的部分。</p>
+          </div>
+        </li>
+        <li class="item">
+          <span class="item-marker">02</span>
+          <div>
+            <h3 data-i18n="now.2t">补设计基础</h3>
+            <p data-i18n="now.2d">在读《写给大家看的设计书》，同时在临摹一些喜欢的网站排版。</p>
+          </div>
+        </li>
+        <li class="item">
+          <span class="item-marker">03</span>
+          <div>
+            <h3 data-i18n="now.3t">写技术笔记</h3>
+            <p data-i18n="now.3d">把踩过的坑记下来，一部分整理后发在博客上。</p>
+          </div>
+        </li>
+        <li class="item">
+          <span class="item-marker">04</span>
+          <div>
+            <h3 data-i18n="now.4t">跑步</h3>
+            <p data-i18n="now.4d">每周三次，最近在准备第一次半马。</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== 作品 ===================== -->
+    <section class="block" id="work">
+      <div class="block-head">
+        <h2 data-i18n="work.title">作品</h2>
+      </div>
+
+      <div class="item-list">
+        <article class="item">
+          <span class="item-marker">2025</span>
+          <div>
+            <h3><a data-i18n="work.1t" href="#" target="_blank" rel="noopener">习惯记录</a></h3>
+            <p data-i18n="work.1d">一个记录每日习惯的小工具，重点是「打开就能记，不用思考」。目前有几十位朋友在用。</p>
+            <p class="item-meta" data-i18n="work.1m">小程序</p>
+          </div>
+        </article>
+
+        <article class="item">
+          <span class="item-marker">2024</span>
+          <div>
+            <h3><a data-i18n="work.2t" href="#" target="_blank" rel="noopener">校园二手</a></h3>
+            <p data-i18n="work.2d">和三位同学一起做的校园二手交易网站。我负责前端，也参与了最初的原型讨论——最后砍掉了三分之二的功能，才变得好用。</p>
+            <p class="item-meta" data-i18n="work.2m">网站 · 团队项目</p>
+          </div>
+        </article>
+
+        <article class="item">
+          <span class="item-marker">2024</span>
+          <div>
+            <h3><a data-i18n="work.3t" href="#" target="_blank" rel="noopener">数据看板</a></h3>
+            <p data-i18n="work.3d">把实验室手工整理的表格做成实时看板，让数据在采集后一秒内就能看到。</p>
+            <p class="item-meta" data-i18n="work.3m">内部工具</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="block-foot">
+        <span data-i18n="work.foot">更多零散的东西在 GitHub。</span>
+        <!-- 上面那句里就有 GitHub 字样，这里再给一个可点的链接，方便你换成自己的地址 -->
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </section>
+
+    <!-- ===================== 经历 ===================== -->
+    <section class="block" id="journey">
+      <div class="block-head">
+        <h2 data-i18n="journey.title">经历</h2>
+      </div>
+
+      <ul class="item-list">
+        <li class="item">
+          <span class="item-marker">2025</span>
+          <div><h3 data-i18n="journey.1">做一个习惯记录工具，边用边改</h3></div>
+        </li>
+        <li class="item">
+          <span class="item-marker">2024</span>
+          <div><h3 data-i18n="journey.2">在某某科技实习，参与内部后台的开发</h3></div>
+        </li>
+        <li class="item">
+          <span class="item-marker">2024</span>
+          <div><h3 data-i18n="journey.3">和同学一起做校园二手交易网站</h3></div>
+        </li>
+        <li class="item">
+          <span class="item-marker">2023</span>
+          <div><h3 data-i18n="journey.4">加入计算机协会，开始给新同学讲前端入门</h3></div>
+        </li>
+        <li class="item">
+          <span class="item-marker">2022</span>
+          <div><h3 data-i18n="journey.5">进入大学，读计算机科学与技术</h3></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== 写作 ===================== -->
+    <section class="block" id="writing">
+      <div class="block-head">
+        <h2 data-i18n="writing.title">写作</h2>
+      </div>
+
+      <ul class="item-list">
+        <li class="item">
+          <span class="item-marker">2024.11</span>
+          <div><h3><a data-i18n="writing.1" href="#" target="_blank" rel="noopener">为什么我把项目的功能砍掉了三分之二</a></h3></div>
+        </li>
+        <li class="item">
+          <span class="item-marker">2024.09</span>
+          <div><h3><a data-i18n="writing.2" href="#" target="_blank" rel="noopener">从零做一个数据看板，我踩过的排版坑</a></h3></div>
+        </li>
+        <li class="item">
+          <span class="item-marker">2024.03</span>
+          <div><h3><a data-i18n="writing.3" href="#" target="_blank" rel="noopener">写给刚开始学前端时的自己</a></h3></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== 联系 ===================== -->
+    <section class="block" id="contact">
+      <div class="block-head">
+        <h2 data-i18n="contact.title">联系</h2>
+      </div>
+
+      <p class="block-lead" data-i18n="contact.lead">想聊聊、有合作想法，或者只是打个招呼，都可以找我。</p>
+      <p class="block-lead" data-i18n="contact.lead2">欢迎各位与我一起探索世界与自我。</p>
+
+      <div class="contact-inline">
+        <div class="contact-row">
+          <span class="contact-label" data-i18n="contact.email">邮箱</span>
+          <a class="contact-value" href="mailto:jaderaychan@smail.nju.edu.cn">jaderaychan@smail.nju.edu.cn</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">GitHub</span>
+          <a class="contact-value" href="https://github.com/" target="_blank" rel="noopener">github.com/yourname</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label" data-i18n="contact.wechat">微信公众号</span>
+          <span class="contact-value is-plain" data-i18n="contact.wechatName">明栖集</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.text">© 2025 陈琪睿（Jaderay Chan）</p>
+  </footer>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

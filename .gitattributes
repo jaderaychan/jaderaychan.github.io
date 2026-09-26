@@ -1,0 +1,2 @@
+# 统一换行符，避免 Windows 上出现"整个文件都被修改"的假差异
+* text=auto eol=lf

@@ -4,6 +4,7 @@ ratio-check.js
 i18n-check.js
 i18n-runtime-test.js
 sync-zh.js
+上线步骤.md
 
 # 系统垃圾文件
 .DS_Store

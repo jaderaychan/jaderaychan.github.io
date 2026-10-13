@@ -375,7 +375,7 @@ h1, h2, h3 {
   font-size: .88rem !important;
 }
 
-/* 教育背景这类条目：左边是学校名，右边靠行尾放学位 / 时间段；
+/* 教育背景这类条目：左边是学校名，右边靠行尾放时间段；
    窄屏放不下时自动换行，不会把标题挤出去 */
 .item-line {
   display: flex;
@@ -384,8 +384,22 @@ h1, h2, h3 {
   justify-content: space-between;
   gap: 2px 14px;
 }
+/* 需要「标题后面紧跟一行小字」时用它（如实习经历的平台/公司） */
+.item-line.is-inline {
+  justify-content: flex-start;
+  gap: 2px 10px;
+}
 .item-line h3 { margin: 0; }
+/* 标题行下面还有正文时，补回标题与正文之间的间距 */
+.item-line + p { margin-top: 6px; }
+/* 教育背景右侧的时间段 */
 .item-aside {
+  color: var(--muted);
+  font-size: .94rem;
+  white-space: nowrap;
+}
+/* 标题后面的小标签（平台 · 公司） */
+.item-tag {
   color: var(--muted);
   font-size: .88rem;
 }

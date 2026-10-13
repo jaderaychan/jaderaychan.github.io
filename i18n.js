@@ -68,7 +68,7 @@ window.I18N = {
     'edu.title': '教育背景',
     'edu.1m': '本科',
     'edu.1t': '南京大学 · 地理与海洋科学学院',
-    'edu.1s': '理学学士 · 2025.9 至今',
+    'edu.1s': '2025.9 至今',
     'edu.2m': '高中',
     'edu.2t': '江苏省阜宁中学',
 
@@ -153,7 +153,7 @@ window.I18N = {
     'edu.title': 'Education',
     'edu.1m': 'Undergrad',
     'edu.1t': 'Nanjing University · School of Geography and Ocean Science',
-    'edu.1s': 'BSc · Sep 2025 – present',
+    'edu.1s': 'Sep 2025 – present',
     'edu.2m': 'High school',
     'edu.2t': 'Funing High School, Jiangsu',
 

@@ -375,6 +375,21 @@ h1, h2, h3 {
   font-size: .88rem !important;
 }
 
+/* 教育背景这类条目：左边是学校名，右边靠行尾放学位 / 时间段；
+   窄屏放不下时自动换行，不会把标题挤出去 */
+.item-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2px 14px;
+}
+.item-line h3 { margin: 0; }
+.item-aside {
+  color: var(--muted);
+  font-size: .88rem;
+}
+
 .block-foot {
   margin: 16px 0 0;
   color: var(--muted);

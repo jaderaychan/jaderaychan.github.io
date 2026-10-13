@@ -68,13 +68,15 @@ window.I18N = {
     'edu.title': '教育背景',
     'edu.1m': '本科',
     'edu.1t': '南京大学 · 地理与海洋科学学院',
-    'edu.1d': '地理信息科学（辅修金融工程）',
+    'edu.1s': '理学学士 · 2025.9 至今',
+    'edu.2m': '高中',
+    'edu.2t': '江苏省阜宁中学',
 
     /* ---- 实习经历 ---- */
     'intern.title': '实习经历',
     'intern.1p': '2026 至今',
     'intern.1t': 'ARTi 校园大使',
-    'intern.1d': '面向理工科与经管类同学，围绕 AI 辅助投研功能设计校园宣传内容，通过院系社群与新媒体渠道推广；组织 AI 投研体验与金融科技研讨活动，搭建并维护学生用户社群；收集整理学生使用反馈并同步品牌方，为产品优化与校园运营提供参考。',
+    'intern.1d': '围绕 AI 辅助投研功能设计校园宣传内容，通过院系社群与新媒体渠道推广；组织 AI 投研体验与金融科技研讨活动，搭建并维护学生用户社群；收集整理学生使用反馈并同步品牌方，为产品优化与校园运营提供参考。',
     'intern.1m': 'AI 投研平台 · 德林控股',
 
     /* ---- 写作 ---- */
@@ -149,14 +151,16 @@ window.I18N = {
     'work.foot': 'More scattered things on GitHub.',
 
     'edu.title': 'Education',
-    'edu.1m': 'BSc',
+    'edu.1m': 'Undergrad',
     'edu.1t': 'Nanjing University · School of Geography and Ocean Science',
-    'edu.1d': 'Major in GIS, minor in Financial Engineering',
+    'edu.1s': 'BSc · Sep 2025 – present',
+    'edu.2m': 'High school',
+    'edu.2t': 'Funing High School, Jiangsu',
 
     'intern.title': 'Internships',
     'intern.1p': 'Since 2026',
     'intern.1t': 'ARTi Campus Ambassador',
-    'intern.1d': 'Designed campus content for science and business students around ARTi\u2019s AI-assisted research features and promoted it through department groups and social channels; '
+    'intern.1d': 'Designed campus content around ARTi\u2019s AI-assisted research features and promoted it through department groups and social channels; '
                + 'ran AI research and fintech workshop events and kept the student user community going; '
                + 'collected student feedback for the brand team to inform product and campus operations.',
     'intern.1m': 'AI investment research platform · 德林控股',

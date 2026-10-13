@@ -132,6 +132,14 @@ h1, h2, h3 {
 .site-nav a.is-active::after { transform: scaleX(1); }
 .site-nav a.is-active { color: var(--text); }
 
+/* 导航从 6 项增加到 7 项后，中等宽度下先收紧间距和字号，
+   否则英文版（About / Now / Projects / Education / Internships / Writing / Contact）
+   在 921px～1140px 之间会把顶栏挤出去。1080px 以上仍用 --nav-gap: 34px 的原样式。 */
+@media (max-width: 1140px) and (min-width: 921px) {
+  :root { --nav-gap: 24px; }
+  .site-nav a { font-size: .92rem; }
+}
+
 .header-actions {
   display: flex;
   justify-content: flex-end;

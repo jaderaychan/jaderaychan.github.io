@@ -13,8 +13,9 @@ window.I18N = {
     /* ---- 顶栏 ---- */
     'nav.about': '关于',
     'nav.now': '在做的事',
-    'nav.work': '作品',
-    'nav.journey': '经历',
+    'nav.work': '项目',
+    'nav.edu': '教育背景',
+    'nav.intern': '实习经历',
     'nav.writing': '写作',
     'nav.contact': '联系',
     'ui.theme': '切换深色 / 浅色',
@@ -48,8 +49,8 @@ window.I18N = {
     'now.4t': '三角洲行动的技术提升',
     'now.4d': '每周四到五次，最近在练习侦查位。',
 
-    /* ---- 作品 ---- */
-    'work.title': '作品',
+    /* ---- 项目 ---- */
+    'work.title': '项目',
     'work.1t': '量化交易平台',
     'work.1d': '以 Python 独立搭建量化交易平台，完成行情数据获取、策略开发与回测、模拟/实盘交易及风险控制等核心模块，'
              + '实现策略执行与数据处理流程，支持多因子选股、技术指标策略等模型的快速验证，'
@@ -63,13 +64,18 @@ window.I18N = {
     'work.3m': 'Agent',
     'work.foot': '更多零散的东西在 GitHub。',
 
-    /* ---- 经历 ---- */
-    'journey.title': '经历',
-    'journey.1': '做一个习惯记录工具，边用边改',
-    'journey.2': '在某某科技实习，参与内部后台的开发',
-    'journey.3': '和同学一起做校园二手交易网站',
-    'journey.4': '加入计算机协会，开始给新同学讲前端入门',
-    'journey.5': '进入大学，读计算机科学与技术',
+    /* ---- 教育背景 ---- */
+    'edu.title': '教育背景',
+    'edu.1m': '本科',
+    'edu.1t': '南京大学 · 地理与海洋科学学院',
+    'edu.1d': '地理信息科学（辅修金融工程）',
+
+    /* ---- 实习经历 ---- */
+    'intern.title': '实习经历',
+    'intern.1p': '2026 至今',
+    'intern.1t': 'ARTi 校园大使',
+    'intern.1d': '面向理工科与经管类同学，围绕 AI 辅助投研功能设计校园宣传内容，通过院系社群与新媒体渠道推广；组织 AI 投研体验与金融科技研讨活动，搭建并维护学生用户社群；收集整理学生使用反馈并同步品牌方，为产品优化与校园运营提供参考。',
+    'intern.1m': 'AI 投研平台 · 德林控股',
 
     /* ---- 写作 ---- */
     'writing.title': '写作',
@@ -95,8 +101,9 @@ window.I18N = {
 
     'nav.about': 'About',
     'nav.now': 'Now',
-    'nav.work': 'Work',
-    'nav.journey': 'Timeline',
+    'nav.work': 'Projects',
+    'nav.edu': 'Education',
+    'nav.intern': 'Internships',
     'nav.writing': 'Writing',
     'nav.contact': 'Contact',
     'ui.theme': 'Toggle dark / light mode',
@@ -127,7 +134,7 @@ window.I18N = {
     'now.4t': 'Getting better at Delta Force',
     'now.4d': 'Four or five times a week — currently practising the recon role.',
 
-    'work.title': 'Work',
+    'work.title': 'Projects',
     'work.1t': 'Quantitative Trading Platform',
     'work.1d': 'Built a quantitative trading platform on my own in Python: market data ingestion, strategy development and backtesting, paper and live trading, and risk control. '
              + 'It also supports quick validation of multi-factor stock selection and technical-indicator strategies, and scores backtests on return, drawdown and Sharpe ratio '
@@ -141,12 +148,18 @@ window.I18N = {
     'work.3m': 'Agent',
     'work.foot': 'More scattered things on GitHub.',
 
-    'journey.title': 'Timeline',
-    'journey.1': 'Building a habit tracker, using it and changing it as I go',
-    'journey.2': 'Interned at Some Tech, working on an internal admin panel',
-    'journey.3': 'Built a campus marketplace with classmates',
-    'journey.4': 'Joined the computing club and started teaching front-end basics',
-    'journey.5': 'Started university, computer science',
+    'edu.title': 'Education',
+    'edu.1m': 'BSc',
+    'edu.1t': 'Nanjing University · School of Geography and Ocean Science',
+    'edu.1d': 'Major in GIS, minor in Financial Engineering',
+
+    'intern.title': 'Internships',
+    'intern.1p': 'Since 2026',
+    'intern.1t': 'ARTi Campus Ambassador',
+    'intern.1d': 'Designed campus content for science and business students around ARTi\u2019s AI-assisted research features and promoted it through department groups and social channels; '
+               + 'ran AI research and fintech workshop events and kept the student user community going; '
+               + 'collected student feedback for the brand team to inform product and campus operations.',
+    'intern.1m': 'AI investment research platform · 德林控股',
 
     'writing.title': 'Writing',
     'writing.1': 'Why I cut two thirds of my project\u2019s features',

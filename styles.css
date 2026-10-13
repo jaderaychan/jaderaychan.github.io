@@ -236,7 +236,9 @@ h1, h2, h3 {
 .portrait-frame img {
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center 32%;
+  /* 照片是 1280×1792（0.714）的一寸证件照，比 0.86 的框更高，
+     所以只能上下裁。32% 会把头顶的头发裁掉，10% 刚好留出一点头顶留白 */
+  object-position: center 10%;
 }
 
 .hero-copy h1 {

@@ -344,6 +344,16 @@ h1, h2, h3 {
 }
 .item:first-child { border-top: 0; }
 
+/* 英文版教育背景的标记「High school」在 88px 的列里差几像素会折成两行。
+   这里只把「教育背景」这一栏的标记列放宽到 100px，学校名随之右移一点；
+   仅在桌面宽度生效——920px 以下沿用全站的 64px 窄列（那里标记折行是正常的）。 */
+@media (min-width: 921px) {
+  #edu .item { grid-template-columns: 100px minmax(0, 1fr); }
+  /* 兜底：万一某个字体下「High school」还是差一两像素，也不让它折行
+     （最多占用右侧 18px 的列间距，不会压到学校名） */
+  #edu .item-marker { white-space: nowrap; }
+}
+
 .item-marker {
   color: var(--muted);
   font-size: .92rem;

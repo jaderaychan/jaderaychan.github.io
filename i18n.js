@@ -155,7 +155,7 @@ window.I18N = {
     'edu.1t': 'Nanjing University · School of Geography and Ocean Science',
     'edu.1s': 'Sep 2025 – present',
     'edu.2m': 'High school',
-    'edu.2t': 'Funing High School, Jiangsu',
+    'edu.2t': 'Funing Middle School, Jiangsu',
 
     'intern.title': 'Internships',
     'intern.1p': 'Since 2026',

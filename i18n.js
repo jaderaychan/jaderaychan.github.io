@@ -38,11 +38,11 @@ window.I18N = {
 
     /* ---- 在做的事 ---- */
     'now.title': '在做的事',
-    'now.note': '最近更新：2026 年 10 月 13日',
+    'now.note': '最近更新：2026 年 10 月 13 日',
     'now.1t': '第七届睿远基金高校研究分析大赛',
     'now.1d': '尝试阅读三中一华的行研报告，目前还在学习阶段。',
     'now.2t': 'ARTi供应链与合作关系研究',
-    'now.2d': '借助deepseek harness的帮助，初步进行分析和研究。',
+    'now.2d': '借助 DeepSeek Harness 的帮助，初步进行分析和研究。',
     'now.3t': '学习线性代数和概率论',
     'now.3d': '在各大平台随机阅读相关笔记，目前基础薄弱。',
     'now.4t': '三角洲行动的技术提升',
@@ -51,15 +51,16 @@ window.I18N = {
     /* ---- 作品 ---- */
     'work.title': '作品',
     'work.1t': '量化交易平台',
-    'work.1d': '以 Python 独立搭建量化交易平台，完成行情数据获取、策略开发与回测、模拟/实盘交易及风险控制等核心模块，实现策略执行与数据处理流程，支持多因子选股、技术指标策略等模型的快速验证，并通过回测指标评估收益、回
-撤与夏普比率，持续优化交易逻辑与仓位管理。',
-    'work.1m': 'python',
+    'work.1d': '以 Python 独立搭建量化交易平台，完成行情数据获取、策略开发与回测、模拟/实盘交易及风险控制等核心模块，'
+             + '实现策略执行与数据处理流程，支持多因子选股、技术指标策略等模型的快速验证，'
+             + '并通过回测指标评估收益、回撤与夏普比率，持续优化交易逻辑与仓位管理。',
+    'work.1m': 'Python',
     'work.2t': '南京大学地理协会网站',
-    'work.2d': '基于 Streamlit 和 html 搭建协会线上门户，宣传协会相关信息和资讯。',
-    'work.2m': 'html · 团队项目',
+    'work.2d': '基于 Streamlit 和 HTML 搭建协会线上门户，宣传协会相关信息和资讯。',
+    'work.2m': 'HTML · 团队项目',
     'work.3t': '宁讯智鉴',
     'work.3d': '城市内涝「感知—建模—验证」自主智能体。',
-    'work.3m': 'agent',
+    'work.3m': 'Agent',
     'work.foot': '更多零散的东西在 GitHub。',
 
     /* ---- 经历 ---- */
@@ -116,26 +117,28 @@ window.I18N = {
     'hero.focus4': 'Piano, and the human soul',
 
     'now.title': 'What I am doing',
-    'now.note': 'Last updated: June 2025',
-    'now.1t': 'A habit-tracking tool',
-    'now.1d': 'I use it myself, and a few friends have picked it up. Currently reworking the logging and stats.',
-    'now.2t': 'Learning design fundamentals',
-    'now.2d': 'Reading The Non-Designer\u2019s Design Book and copying layouts I like.',
-    'now.3t': 'Writing technical notes',
-    'now.3d': 'I keep a record of problems I run into, and publish some of them on my blog.',
-    'now.4t': 'Running',
-    'now.4d': 'Three times a week. Training for my first half marathon.',
+    'now.note': 'Last updated: 13 October 2026',
+    'now.1t': '7th Ruiyuan Fund Inter-University Research & Analysis Competition',
+    'now.1d': 'Working through sell-side equity research from the big Chinese brokers (CITIC, CICC, Huatai, CSC) — still at the learning stage.',
+    'now.2t': 'ARTi: supply chain and partnership research',
+    'now.2d': 'A first pass at the analysis and research, with help from DeepSeek Harness.',
+    'now.3t': 'Learning linear algebra and probability',
+    'now.3d': 'Reading notes here and there across various platforms; my foundations are still shaky.',
+    'now.4t': 'Getting better at Delta Force',
+    'now.4d': 'Four or five times a week — currently practising the recon role.',
 
     'work.title': 'Work',
-    'work.1t': 'Habit Tracker',
-    'work.1d': 'A small tool for logging daily habits. The whole point is that you can open it and log something without thinking. A few dozen friends use it.',
-    'work.1m': 'Mini program',
-    'work.2t': 'Campus Marketplace',
-    'work.2d': 'A second-hand marketplace for our campus, built with three classmates. I did the front end and took part in the early prototyping — we cut two thirds of the features before it actually became usable.',
-    'work.2m': 'Website · team project',
-    'work.3t': 'Data Dashboard',
-    'work.3d': 'Turned a lab spreadsheet maintained by hand into a live dashboard, so readings show up within a second of being collected.',
-    'work.3m': 'Internal tool',
+    'work.1t': 'Quantitative Trading Platform',
+    'work.1d': 'Built a quantitative trading platform on my own in Python: market data ingestion, strategy development and backtesting, paper and live trading, and risk control. '
+             + 'It also supports quick validation of multi-factor stock selection and technical-indicator strategies, and scores backtests on return, drawdown and Sharpe ratio '
+             + 'so the trading logic and position sizing keep improving.',
+    'work.1m': 'Python',
+    'work.2t': 'Nanjing University Geography Association Website',
+    'work.2d': 'Built the association\u2019s online portal with Streamlit and HTML to share its information and news.',
+    'work.2m': 'HTML · team project',
+    'work.3t': '宁讯智鉴',
+    'work.3d': 'An autonomous agent for urban waterlogging — sensing, modelling, validation.',
+    'work.3m': 'Agent',
     'work.foot': 'More scattered things on GitHub.',
 
     'journey.title': 'Timeline',

@@ -74,16 +74,17 @@ window.I18N = {
 
     /* ---- 实习经历 ---- */
     'intern.title': '实习经历',
-    'intern.1p': '2026 至今',
-    'intern.1t': 'ARTi 校园大使',
+    'intern.1p': '2026.9 至今',
+    'intern.1t': 'ARTi-fintech',
+    'intern.1r': '校园大使',
     'intern.1d': '围绕 AI 辅助投研功能设计校园宣传内容，通过院系社群与新媒体渠道推广；组织 AI 投研体验与金融科技研讨活动，搭建并维护学生用户社群；收集整理学生使用反馈并同步品牌方，为产品优化与校园运营提供参考。',
     'intern.1m': 'AI 投研平台 · 德林控股',
 
     /* ---- 写作 ---- */
     'writing.title': '写作',
-    'writing.1': '为什么我把项目的功能砍掉了三分之二',
-    'writing.2': '从零做一个数据看板，我踩过的排版坑',
-    'writing.3': '写给刚开始学前端时的自己',
+    'writing.1': '明栖集：琐事杂感集',
+    'writing.2': '栖琪的个人博客blog',
+    'writing.3': '持续更新中...',
 
     /* ---- 联系 ---- */
     'contact.title': '联系',
@@ -145,7 +146,7 @@ window.I18N = {
     'work.2t': 'Nanjing University Geography Association Website',
     'work.2d': 'Built the association\u2019s online portal with Streamlit and HTML to share its information and news.',
     'work.2m': 'HTML · team project',
-    'work.3t': '宁讯智鉴',
+    'work.3t': 'Ningxun-Zhijian',
     'work.3d': 'An autonomous agent for urban waterlogging — sensing, modelling, validation.',
     'work.3m': 'Agent',
     'work.foot': 'More scattered things on GitHub.',
@@ -158,17 +159,18 @@ window.I18N = {
     'edu.2t': 'Funing Middle School, Jiangsu',
 
     'intern.title': 'Internships',
-    'intern.1p': 'Since 2026',
-    'intern.1t': 'ARTi Campus Ambassador',
+    'intern.1p': 'Sep 2026 – present',
+    'intern.1t': 'ARTi-fintech',
+    'intern.1r': 'Ambassador',
     'intern.1d': 'Designed campus content around ARTi\u2019s AI-assisted research features and promoted it through department groups and social channels; '
                + 'ran AI research and fintech workshop events and kept the student user community going; '
                + 'collected student feedback for the brand team to inform product and campus operations.',
     'intern.1m': 'AI investment research platform · 德林控股',
 
     'writing.title': 'Writing',
-    'writing.1': 'Why I cut two thirds of my project\u2019s features',
-    'writing.2': 'Building a dashboard from scratch: the layout problems I hit',
-    'writing.3': 'To myself when I was starting out in front end',
+    'writing.1': 'Thoughts of JaderayChan: A Collection of Trivial Matters and Random Thoughts',
+    'writing.2': 'JaderayChan\u2019s personal blog',
+    'writing.3': 'To be continued...',
 
     'contact.title': 'Contact',
     'contact.lead': 'Happy to talk, collaborate, or just say hello.',

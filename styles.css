@@ -344,14 +344,19 @@ h1, h2, h3 {
 }
 .item:first-child { border-top: 0; }
 
-/* 英文版教育背景的标记「High school」在 88px 的列里差几像素会折成两行。
-   这里只把「教育背景」这一栏的标记列放宽到 100px，学校名随之右移一点；
-   仅在桌面宽度生效——920px 以下沿用全站的 64px 窄列（那里标记折行是正常的）。 */
-@media (min-width: 921px) {
-  #edu .item { grid-template-columns: 100px minmax(0, 1fr); }
-  /* 兜底：万一某个字体下「High school」还是差一两像素，也不让它折行
-     （最多占用右侧 18px 的列间距，不会压到学校名） */
-  #edu .item-marker { white-space: nowrap; }
+/* 「教育背景」和「实习经历」两栏的标记列放宽到 100px：
+   - 英文的「High school」要约 94px、中文的「校园大使」要约 63px，
+     而 641–920px 这一档原本只有 64px，两个都会折成两行；
+   - 放宽后实习经历的标题也和上面的学校名左右对齐。
+   作用范围从 641px 起；≤640px 时条目会改成上下堆叠（标记在标题上方），走另一条规则。
+   其它栏目不受影响，仍用原来的宽度。 */
+@media (min-width: 641px) {
+  #edu .item,
+  #intern .item { grid-template-columns: 100px minmax(0, 1fr); }
+  /* 兜底：万一某个字体下还是差一两像素，也不让它折行
+     （最多占用右侧 14–18px 的列间距，不会压到标题） */
+  #edu .item-marker,
+  #intern .item-marker { white-space: nowrap; }
 }
 
 .item-marker {
@@ -408,6 +413,9 @@ h1, h2, h3 {
   font-size: .94rem;
   white-space: nowrap;
 }
+/* 标题行里如果带了时间段，把它推到行尾（实习经历那行就是这样，
+   这样它和教育背景的两条时间在右边对齐）；窄屏换行后依然是右对齐 */
+.item-line .item-aside { margin-left: auto; }
 /* 标题后面的小标签（平台 · 公司） */
 .item-tag {
   color: var(--muted);

@@ -165,7 +165,7 @@ window.I18N = {
     'intern.1d': 'Designed campus content around ARTi\u2019s AI-assisted research features and promoted it through department groups and social channels; '
                + 'ran AI research and fintech workshop events and kept the student user community going; '
                + 'collected student feedback for the brand team to inform product and campus operations.',
-    'intern.1m': 'AI investment research platform · 德林控股',
+    'intern.1m': 'AI investment research platform · DL Holdings',
 
     'writing.title': 'Writing',
     'writing.1': 'Thoughts of JaderayChan: A Collection of Trivial Matters and Random Thoughts',
